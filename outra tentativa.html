@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentativa</title>
+</head>
+<style>
+    @keyframes imagem{
+      0% {filter: invert(100%);}
+      50% {filter: invert(75%);}
+      75% {filter: invert(25%);}
+      100% {filter: invert(0%);}
+    }
+
+    img.inverter{
+      animation-iteration-count: 1;
+      animation-duration: 4s;
+      animation-name: imagem;
+    }
+
+    a img:not(.inverter) {
+      transform: scale(0.9);
+    }
+
+    a:hover img:not(.inverter) {
+      animation-iteration-count: infinite;
+      animation-duration: 3s;
+      animation-name: imagem;
+      transform: scale(1);
+    }
+
+    .icones {position: fixed;bottom: 2%;left: 1%;padding: 1%;z-index: 10000000;}
+    .icones img {width: 50%; max-width: 50px; max-height: 75px;}
+    .icones img:hover {filter: invert(100%); }
+
+  </style>
+<body>
+    <img src="icones/5159112955474848860_120.jpg" width="23%" alt="oi">
+    <img src="icones/CS3-Master-Collection.ico" width="4%" alt="oi">
+</body>
+</html>
